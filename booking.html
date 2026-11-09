@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Seat - Seat Allocation Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="brand">
+                <div class="brand-icon">✈</div>
+                <div>
+                    <h1>Seat Allocation Management System</h1>
+                    <p class="subtitle">Cinema &amp; Airline Booking</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="booking.html" class="nav-link active">Book Seat</a>
+                <a href="admin.html" class="nav-link">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container booking-layout">
+        <div id="messageBox" class="message-box"></div>
+
+        <section class="card booking-main">
+            <div class="section-header">
+                <h2>Seat Map</h2>
+                <button id="refreshGridBtn" class="btn btn-secondary btn-sm" onclick="refreshDashboard()">Refresh</button>
+            </div>
+
+            <div class="screen-label">SCREEN / COCKPIT</div>
+
+            <div id="seatGrid" class="seat-grid"></div>
+
+            <div class="legend inline-legend">
+                <div class="legend-item"><span class="legend-dot free"></span> FREE</div>
+                <div class="legend-item"><span class="legend-dot booked"></span> BOOKED</div>
+                <div class="legend-item"><span class="legend-dot blocked"></span> BLOCKED</div>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <section class="card stats-card">
+                <h3>Statistics</h3>
+                <div class="stat-item">
+                    <span class="stat-label">Booked Seats</span>
+                    <span id="bookedCount" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Available Seats</span>
+                    <span id="availableCount" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Occupancy</span>
+                    <span id="occupancyPercent" class="stat-value accent">0%</span>
+                </div>
+            </section>
+
+            <section class="card group-card">
+                <h3>Group Booking</h3>
+                <p class="muted">Find contiguous seats in the same row.</p>
+                <label for="groupCount" class="input-label">Number of Seats</label>
+                <input type="number" id="groupCount" min="1" max="10" value="4" class="input-field">
+                <div class="button-group">
+                    <button id="findSeatsBtn" class="btn btn-secondary">Find Seats</button>
+                    <button id="bookGroupBtn" class="btn btn-primary">Book Now</button>
+                </div>
+                <div class="allocated-section">
+                    <h4>Allocated Seats</h4>
+                    <div id="allocatedSeats" class="allocated-seats">
+                        <p class="muted">No seats allocated yet.</p>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Seat Allocation Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>

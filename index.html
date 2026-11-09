@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Allocation Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="brand">
+                <div class="brand-icon">✈</div>
+                <div>
+                    <h1>Seat Allocation Management System</h1>
+                    <p class="subtitle">Cinema &amp; Airline Booking</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="booking.html" class="nav-link">Book Seat</a>
+                <a href="admin.html" class="nav-link">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-card card">
+            <div class="hero-text">
+                <h2>Welcome to the Booking Counter</h2>
+                <p>
+                    Manage in-memory seat availability for a single show or flight.
+                    View the live seat map, book individual seats, or reserve contiguous
+                    seats for groups — all with double-booking protection.
+                </p>
+                <div class="hero-actions">
+                    <a href="booking.html" class="btn btn-primary">Start Booking</a>
+                    <a href="admin.html" class="btn btn-secondary">Admin Panel</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="mini-grid">
+                    <span class="seat free">A1</span>
+                    <span class="seat free">A2</span>
+                    <span class="seat booked">A3</span>
+                    <span class="seat blocked">A4</span>
+                    <span class="seat free">A5</span>
+                    <span class="seat free">B1</span>
+                    <span class="seat booked">B2</span>
+                    <span class="seat free">B3</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-grid">
+            <article class="card feature-card">
+                <h3>Live Seat Grid</h3>
+                <p>80 seats across rows A–H with real-time color-coded availability.</p>
+            </article>
+            <article class="card feature-card">
+                <h3>Group Booking</h3>
+                <p>Find and book contiguous seats within the same row — never across rows.</p>
+            </article>
+            <article class="card feature-card">
+                <h3>Occupancy Stats</h3>
+                <p>Track booked seats, availability, and occupancy percentage instantly.</p>
+            </article>
+        </section>
+
+        <section class="legend-card card">
+            <h3>Seat Legend</h3>
+            <div class="legend">
+                <div class="legend-item"><span class="legend-dot free"></span> FREE — Available</div>
+                <div class="legend-item"><span class="legend-dot booked"></span> BOOKED — Occupied</div>
+                <div class="legend-item"><span class="legend-dot blocked"></span> BLOCKED — Unavailable</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Seat Allocation Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

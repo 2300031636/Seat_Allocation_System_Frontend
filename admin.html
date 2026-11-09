@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Seat Allocation Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="brand">
+                <div class="brand-icon">✈</div>
+                <div>
+                    <h1>Seat Allocation Management System</h1>
+                    <p class="subtitle">Cinema &amp; Airline Booking</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="booking.html" class="nav-link">Book Seat</a>
+                <a href="admin.html" class="nav-link active">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container admin-layout">
+        <div id="adminMessageBox" class="message-box"></div>
+
+        <section class="card admin-controls">
+            <h2>Admin Controls</h2>
+            <p class="muted">Manage seat inventory and view live occupancy metrics.</p>
+            <div class="admin-buttons">
+                <button id="resetBtn" class="btn btn-danger">Reset Seats</button>
+                <button id="refreshBtn" class="btn btn-secondary">Refresh</button>
+                <button id="occupancyBtn" class="btn btn-primary">View Occupancy</button>
+            </div>
+        </section>
+
+        <section class="card admin-stats">
+            <h3>Occupancy Overview</h3>
+            <div class="admin-stat-grid">
+                <div class="admin-stat-card">
+                    <span class="stat-label">Total Seats</span>
+                    <span id="adminTotalSeats" class="stat-value">80</span>
+                </div>
+                <div class="admin-stat-card">
+                    <span class="stat-label">Booked Seats</span>
+                    <span id="adminBookedCount" class="stat-value">0</span>
+                </div>
+                <div class="admin-stat-card">
+                    <span class="stat-label">Available Seats</span>
+                    <span id="adminAvailableCount" class="stat-value">0</span>
+                </div>
+                <div class="admin-stat-card">
+                    <span class="stat-label">Occupancy %</span>
+                    <span id="adminOccupancyPercent" class="stat-value accent">0%</span>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div id="occupancyBar" class="progress-bar"></div>
+            </div>
+        </section>
+
+        <section class="card admin-preview">
+            <h3>Seat Status Preview</h3>
+            <div id="adminSeatPreview" class="admin-preview-grid"></div>
+        </section>
+
+        <section class="card screenshots-placeholder">
+            <h3>Screenshots</h3>
+            <div class="screenshot-grid">
+                <div class="screenshot-box">
+                    <span>Dashboard Screenshot Placeholder</span>
+                </div>
+                <div class="screenshot-box">
+                    <span>Booking Page Screenshot Placeholder</span>
+                </div>
+                <div class="screenshot-box">
+                    <span>Admin Panel Screenshot Placeholder</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Seat Allocation Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
